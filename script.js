@@ -22,9 +22,7 @@ againButtonSelector.addEventListener("click", function () {
   numberV.value = "";
   matchNumebr = Math.trunc(Math.random() * 20);
   checkButtonSelector.disabled = false;
-  console.log(matchNumebr);
 });
-console.log(matchNumebr);
 
 checkButtonSelector.addEventListener("click", function () {
   const enterValue = Number(numberV.value);
@@ -38,13 +36,9 @@ checkButtonSelector.addEventListener("click", function () {
     const hi = Number(highScore.textContent);
 
     let highScoreV = 0;
-    console.log(sc + "--sc");
-    console.log(hi + "--hi");
     if (hi > sc) {
-      console.log("if");
       highScore.textContent = hi;
     } else {
-      console.log("elese");
       highScore.textContent = sc;
     }
 
