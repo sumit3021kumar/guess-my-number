@@ -22,7 +22,9 @@ againButtonSelector.addEventListener("click", function () {
   numberV.value = "";
   matchNumebr = Math.trunc(Math.random() * 20);
   checkButtonSelector.disabled = false;
+  console.log(matchNumebr);
 });
+console.log(matchNumebr);
 
 checkButtonSelector.addEventListener("click", function () {
   const enterValue = Number(numberV.value);
@@ -32,18 +34,21 @@ checkButtonSelector.addEventListener("click", function () {
     message.textContent = "Correct Number";
     body.classList.add("green");
     checkButtonSelector.disabled = true;
-    const sc = score.textContent;
-    const hi = highScore.textContent;
+    const sc = Number(score.textContent);
+    const hi = Number(highScore.textContent);
+
     let highScoreV = 0;
+    console.log(sc + "--sc");
+    console.log(hi + "--hi");
     if (hi > sc) {
-      highScoreV = hi;
+      console.log("if");
       highScore.textContent = hi;
     } else {
-      highScoreV = sc;
+      console.log("elese");
       highScore.textContent = sc;
     }
 
-    matchSle.textContent = highScoreV;
+    matchSle.textContent = sc;
     document.querySelector(".number").value = "";
   } else {
     const sc = Number(score.textContent);
